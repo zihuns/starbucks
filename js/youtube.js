@@ -10,6 +10,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 function onYouTubeIframeAPIReady() {
   // <div id="player"></div>
   new YT.Player('player', {
+    // videoId: 'LYJN3eDriOs', // 디지몬
     videoId: '7RAKzW2RdWk', // 최초 재생할 유튜브 영상 ID
     playerVars: {
       autoplay: true, // 자동 재생 유무
@@ -18,6 +19,7 @@ function onYouTubeIframeAPIReady() {
     },
     events: {
       onReady: function(event) {
+        // event.target.unMute()  // 음소거 해제
         event.target.mute() // 음소거
       }
     }
